@@ -1,0 +1,81 @@
+[2024-06-05T16:27:27.039+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-05T16:27:27.064+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [queued]>
+[2024-06-05T16:27:27.082+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [queued]>
+[2024-06-05T16:27:27.082+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-05T16:27:27.100+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): pipeline> on 2023-05-17 15:00:00+00:00
+[2024-06-05T16:27:27.115+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=7591) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-05T16:27:27.116+0000] {standard_task_runner.py:63} INFO - Started process 7752 to run task
+[2024-06-05T16:27:27.132+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'car_price_prediction', 'pipeline', 'scheduled__2023-05-17T15:00:00+00:00', '--job-id', '637', '--raw', '--subdir', 'DAGS_FOLDER/hw_dag.py', '--cfg-path', '/tmp/tmpvdz5hgwx']
+[2024-06-05T16:27:27.132+0000] {standard_task_runner.py:91} INFO - Job 637: Subtask pipeline
+[2024-06-05T16:27:27.219+0000] {task_command.py:426} INFO - Running <TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [running]> on host ece5ff154bbf
+[2024-06-05T16:27:27.381+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='car_price_prediction' AIRFLOW_CTX_TASK_ID='pipeline' AIRFLOW_CTX_EXECUTION_DATE='2023-05-17T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-17T15:00:00+00:00'
+[2024-06-05T16:27:27.382+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-05T16:27:28.796+0000] {pipeline.py:116} INFO - model: LogisticRegression, acc_mean: 0.7591, acc_std: 0.0075
+[2024-06-05T16:27:49.832+0000] {pipeline.py:116} INFO - model: RandomForestClassifier, acc_mean: 0.7778, acc_std: 0.0048
+[2024-06-05T16:28:03.343+0000] {pipeline.py:116} INFO - model: SVC, acc_mean: 0.7871, acc_std: 0.0042
+[2024-06-05T16:28:03.343+0000] {pipeline.py:121} INFO - best model: SVC, accuracy: 0.7871
+[2024-06-05T16:28:07.300+0000] {pipeline.py:129} INFO - Model is saved as /home/***/***_hw/data/models/cars_pipe_202406051628.pkl
+[2024-06-05T16:28:07.302+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-05T16:28:07.302+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-05T16:28:07.312+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=car_price_prediction, task_id=pipeline, run_id=scheduled__2023-05-17T15:00:00+00:00, execution_date=20230517T150000, start_date=20240605T162727, end_date=20240605T162807
+[2024-06-05T16:28:07.354+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-05T16:28:07.368+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-05T16:28:07.370+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2024-06-05T20:40:12.207+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-05T20:40:12.219+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [queued]>
+[2024-06-05T20:40:12.224+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [queued]>
+[2024-06-05T20:40:12.224+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-05T20:40:12.231+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): pipeline> on 2023-05-17 15:00:00+00:00
+[2024-06-05T20:40:12.240+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=12632) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-05T20:40:12.241+0000] {standard_task_runner.py:63} INFO - Started process 12742 to run task
+[2024-06-05T20:40:12.241+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'car_price_prediction', 'pipeline', 'scheduled__2023-05-17T15:00:00+00:00', '--job-id', '1959', '--raw', '--subdir', 'DAGS_FOLDER/hw_dag.py', '--cfg-path', '/tmp/tmp_4574hme']
+[2024-06-05T20:40:12.242+0000] {standard_task_runner.py:91} INFO - Job 1959: Subtask pipeline
+[2024-06-05T20:40:12.270+0000] {task_command.py:426} INFO - Running <TaskInstance: car_price_prediction.pipeline scheduled__2023-05-17T15:00:00+00:00 [running]> on host d0ff8214a49e
+[2024-06-05T20:40:12.318+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='car_price_prediction' AIRFLOW_CTX_TASK_ID='pipeline' AIRFLOW_CTX_EXECUTION_DATE='2023-05-17T15:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-17T15:00:00+00:00'
+[2024-06-05T20:40:12.319+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-05T20:40:12.320+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-05T20:40:12.321+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/airflow_hw/modules/pipeline.py", line 73, in pipeline
+    df = pd.read_csv(f'{path}/data/train/homework.csv')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './data/train/homework.csv'
+[2024-06-05T20:40:12.327+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=car_price_prediction, task_id=pipeline, run_id=scheduled__2023-05-17T15:00:00+00:00, execution_date=20230517T150000, start_date=20240605T204012, end_date=20240605T204012
+[2024-06-05T20:40:12.336+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 1959 for task pipeline ([Errno 2] No such file or directory: './data/train/homework.csv'; 12742)
+[2024-06-05T20:40:12.374+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-05T20:40:12.388+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-05T20:40:12.390+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

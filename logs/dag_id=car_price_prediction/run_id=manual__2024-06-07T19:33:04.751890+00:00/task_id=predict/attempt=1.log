@@ -1,0 +1,90 @@
+[2024-06-07T19:33:25.506+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-07T19:33:25.517+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: car_price_prediction.predict manual__2024-06-07T19:33:04.751890+00:00 [queued]>
+[2024-06-07T19:33:25.521+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: car_price_prediction.predict manual__2024-06-07T19:33:04.751890+00:00 [queued]>
+[2024-06-07T19:33:25.521+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-07T19:33:25.529+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): predict> on 2024-06-07 19:33:04.751890+00:00
+[2024-06-07T19:33:25.537+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=126) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-06-07T19:33:25.538+0000] {standard_task_runner.py:63} INFO - Started process 140 to run task
+[2024-06-07T19:33:25.538+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'car_price_prediction', 'predict', 'manual__2024-06-07T19:33:04.751890+00:00', '--job-id', '2918', '--raw', '--subdir', 'DAGS_FOLDER/hw_dag.py', '--cfg-path', '/tmp/tmp9joyqiwi']
+[2024-06-07T19:33:25.538+0000] {standard_task_runner.py:91} INFO - Job 2918: Subtask predict
+[2024-06-07T19:33:25.563+0000] {task_command.py:426} INFO - Running <TaskInstance: car_price_prediction.predict manual__2024-06-07T19:33:04.751890+00:00 [running]> on host 96862358bf0b
+[2024-06-07T19:33:25.610+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='car_price_prediction' AIRFLOW_CTX_TASK_ID='predict' AIRFLOW_CTX_EXECUTION_DATE='2024-06-07T19:33:04.751890+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-07T19:33:04.751890+00:00'
+[2024-06-07T19:33:25.611+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-07T19:33:25.611+0000] {predict.py:36} WARNING - /home/***/***_hw/data/models/cars_pipe_202406071947.pkl
+[2024-06-07T19:33:25.612+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator FunctionTransformer from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.613+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator SimpleImputer from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.613+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.613+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator Pipeline from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.613+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.614+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator ColumnTransformer from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.615+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator SVC from version 1.2.2 when using version 1.5.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+[2024-06-07T19:33:25.615+0000] {predict.py:42} WARNING - model loaded successfully
+[2024-06-07T19:33:25.615+0000] {predict.py:49} WARNING - /home/***/***_hw
+[2024-06-07T19:33:25.616+0000] {predict.py:50} WARNING - ['/home/***/***_hw/data/test/7310993818.json', '/home/***/***_hw/data/test/7316509996.json', '/home/***/***_hw/data/test/7315173150.json', '/home/***/***_hw/data/test/7316152972.json', '/home/***/***_hw/data/test/7313922964.json']
+[2024-06-07T19:33:25.616+0000] {logging_mixin.py:188} INFO - /home/***/***_hw/data/test/7310993818.json
+[2024-06-07T19:33:25.621+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-07T19:33:25.621+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/airflow_hw/modules/predict.py", line 63, in predict
+    df['pred'] = model.predict(df)
+                 ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sklearn/pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sklearn/pipeline.py", line 906, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sklearn/preprocessing/_function_transformer.py", line 252, in transform
+    out = self._transform(X, func=self.func, kw_args=self.kw_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sklearn/preprocessing/_function_transformer.py", line 379, in _transform
+    return func(X, **(kw_args if kw_args else {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alexander/airflow_hw/modules/pipeline.py", line 60, in filter_data
+TypeError: list indices must be integers or slices, not DataFrame
+[2024-06-07T19:33:25.626+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=car_price_prediction, task_id=predict, run_id=manual__2024-06-07T19:33:04.751890+00:00, execution_date=20240607T193304, start_date=20240607T193325, end_date=20240607T193325
+[2024-06-07T19:33:25.633+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 2918 for task predict (list indices must be integers or slices, not DataFrame; 140)
+[2024-06-07T19:33:25.670+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-07T19:33:25.680+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-07T19:33:25.682+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
